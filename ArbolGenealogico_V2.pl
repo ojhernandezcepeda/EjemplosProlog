@@ -26,4 +26,3 @@ esposode(A,B):- padrede(C,A), padrede(C,B), A\==B.
 suegrode(A,B):- esposode(A,C), hijode(B,C).
 cuñadode(A,B):- hermanode(B,C), esposode(A,C).
 esfeliz(A):- not(esposode(_,A)).
-
