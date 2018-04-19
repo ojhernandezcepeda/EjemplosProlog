@@ -6,7 +6,6 @@ padrede('luis oscar','deidy').
 padrede('milton','luis').
 padrede('luis jr','luis').
 padrede('luis','raimundo').
-
 % Version_1: papa, hijo, nieto,abuelo, bisnieto,bisabuelo, tio,
 % sobrino, hermano, primo
 
