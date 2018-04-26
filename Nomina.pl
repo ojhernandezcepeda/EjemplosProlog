@@ -14,3 +14,5 @@ empleado('Juan', 'uno', 'MT').
 
 sueldo(X,S):-empleado(X,C,T),categoria(C,V),horas(T,H),valorHora(VH), salud(VS), pension(VP), S is V*H*VH*VS*VP.
 sueldo(X,S):-empleado(X,C,H),categoria(C,V),valorHora(VH),H \= 'TC', H\= 'MT', salud(VS), pension(VP), S is V*H*VH*VS*VP.
+
+listaCategoria(E,C):- empleado(E,C,_).
