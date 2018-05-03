@@ -23,7 +23,3 @@ nominaTotal([], 0).
 nominaTotal([X|Y], Z):- nominaTotal(Y, Z2), Z is Z2+X.
 
 valorNomina(V):- listaSueldos(L), nominaTotal(L, V).
-
-
-
-
