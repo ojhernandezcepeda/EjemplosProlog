@@ -15,4 +15,15 @@ empleado('Juan', 'uno', 'MT').
 sueldo(X,S):-empleado(X,C,T),categoria(C,V),horas(T,H),valorHora(VH), salud(VS), pension(VP), S is V*H*VH*VS*VP.
 sueldo(X,S):-empleado(X,C,H),categoria(C,V),valorHora(VH),H \= 'TC', H\= 'MT', salud(VS), pension(VP), S is V*H*VH*VS*VP.
 
-listaCategoria(E,C):- empleado(E,C,_).
+listarXCategoria(E,C):- empleado(E,C,_).
+
+listaSueldos(L):- findall(S, sueldo(_,S), L).
+
+nominaTotal([], 0).
+nominaTotal([X|Y], Z):- nominaTotal(Y, Z2), Z is Z2+X.
+
+valorNomina(V):- listaSueldos(L), nominaTotal(L, V).
+
+
+
+
